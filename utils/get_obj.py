@@ -10,6 +10,7 @@ from leaderboard.models import *
 from problem.models import *
 from proposal.models import *
 from submission.models import *
+from board.models import *
 from django.http import Http404
 
 # is_deleted 고려해주세요ㅎㅎ사랑합니다~~~~
@@ -91,3 +92,7 @@ def get_submission_competition(id):
 def get_exam(id):
     exam = get_object_or_404(Exam, id=id)
     return exam
+
+def get_board(id):
+    board = get_object_or_404(Board, id=id)
+    return board
